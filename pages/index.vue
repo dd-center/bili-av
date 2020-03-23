@@ -48,14 +48,14 @@ export default {
     },
     async doAvConvert(value) {
       const result = await this.$axios
-        .get('/api/convert?av=' + value)
+        .get('https://av.bilisc.com/api/convert?av=' + value)
         .catch(() => {})
       if (!result) return
       this.result = result.data
     },
     async doBvConvert(value) {
       const result = await this.$axios
-        .get('/api/convert?bv=' + value)
+        .get('https://av.bilisc.com/api/convert?bv=' + value)
         .catch(() => {})
       if (!result) return
       this.result = result.data
