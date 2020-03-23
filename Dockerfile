@@ -14,6 +14,7 @@ COPY --from=build /app/.nuxt /app/.nuxt
 COPY --from=build /app/nuxt.config.js /app/nuxt.config.js
 COPY --from=build /app/package.json /app/package.json
 COPY --from=build /app/package-lock.json /app/package-lock.json
+COPY --from=build /app/server /app/server
 RUN npm i --production
 RUN npm audit fix
 EXPOSE 2230
