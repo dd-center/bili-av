@@ -3,10 +3,10 @@ module.exports = {
   /*
    ** Headers of the page
    */
+  server: {
+    port: 2230
+  },
   head: {
-    server: {
-      port: 2230
-    },
     title: 'BiliBili AV/BV Utils',
     meta: [
       { charset: 'utf-8' },
