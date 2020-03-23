@@ -4,7 +4,10 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    server: {
+      port: 2230
+    },
+    title: 'BiliBili AV/BV Utils',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
