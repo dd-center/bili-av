@@ -105,6 +105,8 @@ export default {
       this.input = 'av' + dec(value)
     },
     openWatch() {
+      if (this.input === '') return
+      if (!isNaN(Number(this.input))) this.input = 'av' + this.input
       window.open('https://bilibili.com/video/' + this.input, '_blank')
     }
   },
