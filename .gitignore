@@ -72,6 +72,9 @@ typings/
 dist
 dist.zip
 
+# Electron generate
+.build
+
 # vuepress build output
 .vuepress/dist
 
