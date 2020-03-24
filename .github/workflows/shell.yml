@@ -4,6 +4,7 @@ on:
     branches:
       - master
   pull_request:
+  release:
 env:
   IMAGE_NAME: node-slim
 jobs:
