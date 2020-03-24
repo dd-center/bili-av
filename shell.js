@@ -61,7 +61,9 @@ findPort(10000).then((port) => {
         nodeIntegration: true
       },
       backgroundColor: '#409eff',
-      titleBarStyle: 'hidden'
+      titleBarStyle: 'hidden',
+      height: 600,
+      width: 800
     })
     win.maximize()
     win.on('closed', () => (win = null))
