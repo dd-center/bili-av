@@ -51,8 +51,8 @@
       "icon": "build/icon.icns"
     },
     "win": {
-      "target": "portable",
-      "icon": "build/icon.ico"
+      "target": "nsis",
+      "icon": "build/iconbg.ico"
     },
     "linux": {
       "category": "Utility",
