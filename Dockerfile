@@ -6,7 +6,7 @@ COPY . /app
 ENV NPM_CONFIG_LOGLEVEL warn
 RUN npm i
 RUN npm audit fix
-RUN npm run build
+RUN npm run website:build
 
 FROM node:slim AS final
 WORKDIR /app
@@ -18,4 +18,4 @@ COPY --from=build /app/server /app/server
 RUN npm i --production
 RUN npm audit fix
 EXPOSE 2230
-ENTRYPOINT npm run start
+ENTRYPOINT npm run website:start
