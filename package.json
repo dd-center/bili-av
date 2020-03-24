@@ -57,7 +57,11 @@
     "linux": {
       "category": "Utility",
       "synopsis": "AV/BV 互转小工具",
-      "icon": "build/icon.png"
+      "icon": "build/icon.png",
+      "target": "AppImage"
+    },
+    "snap": {
+      "publish": []
     },
     "publish": [
       {
