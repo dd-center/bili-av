@@ -56,10 +56,12 @@ findPort(10000).then((port) => {
 
   const newWin = () => {
     win = new electron.BrowserWindow({
-      icon: path.join(__dirname, 'build/icon.png'),
+      icon: path.join(__dirname, 'build/iconbg.png'),
       webPreferences: {
         nodeIntegration: true
-      }
+      },
+      backgroundColor: '#409eff',
+      titleBarStyle: 'hidden'
     })
     win.maximize()
     win.on('closed', () => (win = null))
@@ -70,7 +72,7 @@ findPort(10000).then((port) => {
     autoUpdater.quitAndInstall()
   })
 
-  app.on('ready', () => {
+  app.on('ready', async () => {
     // Create the Menu
 
     if (process.platform === 'darwin') {
@@ -94,7 +96,13 @@ findPort(10000).then((port) => {
       electron.Menu.setApplicationMenu(null)
     }
 
-    newWin()
+    await newWin()
+
+    fs.readFile(path.resolve(__dirname, 'package.json'), (err, data) => {
+      if (!err) {
+        win.setTitle(win.getTitle() + ' ' + JSON.parse(data).version)
+      }
+    })
 
     autoUpdater.checkForUpdates()
   })
