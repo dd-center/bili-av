@@ -3,6 +3,16 @@ const http = require('http')
 const fs = require('fs')
 const net = require('net')
 const electron = require('electron')
+const log = require('electron-log')
+const { autoUpdater } = require('electron-updater')
+
+// Config log
+
+autoUpdater.logger = log
+autoUpdater.logger.transports.file.level = 'info'
+log.info('App starting...')
+
+// Find port
 
 const findPort = (port) =>
   new Promise((resolve) => {
@@ -40,7 +50,10 @@ findPort(10000).then((port) => {
     })
   })
   server.listen(port, '127.0.0.1')
-  const eapp = electron.app
+  const app = electron.app
+
+  // Create the window
+
   const newWin = () => {
     win = new electron.BrowserWindow({
       icon: path.join(__dirname, 'build/icon.png'),
@@ -52,7 +65,47 @@ findPort(10000).then((port) => {
     win.on('closed', () => (win = null))
     return win.loadURL(`http://127.0.0.1:${port}`)
   }
-  eapp.on('ready', newWin)
-  eapp.on('window-all-closed', () => eapp.quit())
-  eapp.on('activate', () => win === null && newWin())
+
+  autoUpdater.on('update-downloaded', (ev, info) => {
+    autoUpdater.quitAndInstall()
+  })
+
+  app.on('ready', () => {
+    // Create the Menu
+
+    if (process.platform === 'darwin') {
+      electron.Menu.setApplicationMenu(
+        electron.Menu.buildFromTemplate([
+          {
+            label: 'AV/BV 互转小工具',
+            submenu: [
+              {
+                label: '退出',
+                accelerator: 'Command+Q',
+                click() {
+                  app.quit()
+                }
+              }
+            ]
+          }
+        ])
+      )
+    } else {
+      electron.Menu.setApplicationMenu(null)
+    }
+
+    newWin()
+
+    autoUpdater.checkForUpdates()
+  })
+
+  app.on('web-contents-created', (e, webContents) => {
+    webContents.on('new-window', (event, url) => {
+      event.preventDefault()
+      electron.shell.openExternal(url)
+    })
+  })
+
+  app.on('window-all-closed', () => app.quit())
+  app.on('activate', () => win === null && newWin())
 })
