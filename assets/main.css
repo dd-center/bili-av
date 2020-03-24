@@ -1,0 +1,38 @@
+html,
+body {
+  background-color: #409eff;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+p {
+  margin: 2px;
+}
+
+section {
+  margin: 8px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.el-scrollbar__thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.el-scrollbar__thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.el-button--plain {
+  background: none;
+  color: white;
+}
