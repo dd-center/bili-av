@@ -60,7 +60,14 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "https://av.bilisc.com/releases/"
+        "url": "https://av.bilisc.com/releases/",
+        "publishAutoUpdate": false
+      },
+      {
+        "provider": "github",
+        "repo": "bili-av",
+        "owner": "dd-center",
+        "publishAutoUpdate": true
       }
     ]
   },
