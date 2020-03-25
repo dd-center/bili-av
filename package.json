@@ -17,7 +17,7 @@
   },
   "main": "shell.js",
   "build": {
-    "productName": "AV/BV 互转小工具",
+    "productName": "AVBVConverter",
     "appId": "com.bilisc.av",
     "directories": {
       "output": ".build",
