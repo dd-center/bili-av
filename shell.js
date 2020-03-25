@@ -61,7 +61,7 @@ findPort(10000).then((port) => {
         nodeIntegration: true
       },
       backgroundColor: '#409eff',
-      titleBarStyle: 'hidden',
+      titleBarStyle: 'default',
       height: 600,
       width: 800
     })
