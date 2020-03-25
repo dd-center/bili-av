@@ -1,4 +1,11 @@
-# AV/BV 号互转小工具
+<div align="center">
+  <h1><a href="https://av.bilisc.com/" target="_blank">AV/BV 号互转小工具</a></h1>
+
+  <p style="font-size: 20px;">顺便探索一下静态页面一份代码全平台构建的可能性（</p>
+
+</div>
+
+![Screenshot](https://github.com/dd-center/bili-av/raw/master/docs/Screenshot_v1.0.2.png)
 
 核心算法在：[converter.js](https://github.com/dd-center/bili-av/blob/master/utils/converter.js)
 
@@ -11,8 +18,6 @@
 网站里面也有 Electron 版的下载地址。
 
 ## Development & Other
-
-这个 repo 同时可以作为静态站多端共享一份代码的好栗子~
 
 Docker 部署：参见 [CI](https://github.com/dd-center/bili-av/actions?query=workflow%3A%22Website+Build%22)
 
