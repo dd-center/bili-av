@@ -159,6 +159,7 @@
     "mini-types": "^0.1.1",
     "miniprogram-api-typings": "^2.10.2-1",
     "nodemon": "^1.18.9",
+    "postcss-comment": "^2.0.0",
     "prettier": "^1.19.1",
     "stylelint": "^10.1.0",
     "vue-template-compiler": "^2.6.11"
