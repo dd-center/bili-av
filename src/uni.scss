@@ -60,3 +60,20 @@ $uni-color-subtitle: #555; // 二级标题颜色
 $uni-font-size-subtitle:36upx;
 $uni-color-paragraph: #3f536e; // 文章段落颜色
 $uni-font-size-paragraph:30upx;
+
+.text {
+  margin: 2px;
+}
+
+.section {
+  margin: 8px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
