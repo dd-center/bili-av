@@ -92,3 +92,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# UniApp Config
+src/manifest.json
