@@ -1,20 +1,20 @@
 /* 颜色变量 */
 
 /* 行为相关颜色 */
-$uni-color-primary: #007aff;
+$uni-color-primary: #409eff;
 $uni-color-success: #4cd964;
 $uni-color-warning: #f0ad4e;
 $uni-color-error: #dd524d;
 
 /* 文字基本颜色 */
-$uni-text-color:#333;//基本色
-$uni-text-color-inverse:#fff;//反色
-$uni-text-color-grey:#999;//辅助灰色，如加载更多的提示信息
-$uni-text-color-placeholder: #808080;
+$uni-text-color:#fff;//基本色
+$uni-text-color-inverse:#000;//反色
+$uni-text-color-grey:#ccc;//辅助灰色，如加载更多的提示信息
+$uni-text-color-placeholder: #ccc;
 $uni-text-color-disable:#c0c0c0;
 
 /* 背景颜色 */
-$uni-bg-color:#fff;
+$uni-bg-color:#409eff;
 $uni-bg-color-grey:#f8f8f8;
 $uni-bg-color-hover:#f1f1f1;//点击状态颜色
 $uni-bg-color-mask:rgba(0, 0, 0, 0.4);//遮罩颜色
@@ -60,20 +60,3 @@ $uni-color-subtitle: #555; // 二级标题颜色
 $uni-font-size-subtitle:36upx;
 $uni-color-paragraph: #3f536e; // 文章段落颜色
 $uni-font-size-paragraph:30upx;
-
-.text {
-  margin: 2px;
-}
-
-.section {
-  margin: 8px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
