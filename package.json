@@ -12,9 +12,26 @@
     "electron:dev": "cross-env NODE_ENV=development electron shell.js",
     "electron:build-windows": "electron-builder --win --x64 --ia32",
     "electron:build-mac": "electron-builder --mac --x64 --ia32",
+    "uniapp:dev:app-plus": "cross-env NODE_ENV=development UNI_PLATFORM=app-plus vue-cli-service uni-build --watch",
+    "uniapp:dev:mp-alipay": "cross-env NODE_ENV=development UNI_PLATFORM=mp-alipay vue-cli-service uni-build --watch",
+    "uniapp:dev:mp-baidu": "cross-env NODE_ENV=development UNI_PLATFORM=mp-baidu vue-cli-service uni-build --watch",
+    "uniapp:dev:mp-qq": "cross-env NODE_ENV=development UNI_PLATFORM=mp-qq vue-cli-service uni-build --watch",
+    "uniapp:dev:mp-toutiao": "cross-env NODE_ENV=development UNI_PLATFORM=mp-toutiao vue-cli-service uni-build --watch",
+    "uniapp:dev:mp-weixin": "cross-env NODE_ENV=development UNI_PLATFORM=mp-weixin vue-cli-service uni-build --watch",
+    "uniapp:build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
+    "uniapp:build:mp-alipay": "cross-env NODE_ENV=production UNI_PLATFORM=mp-alipay vue-cli-service uni-build",
+    "uniapp:build:mp-baidu": "cross-env NODE_ENV=production UNI_PLATFORM=mp-baidu vue-cli-service uni-build",
+    "uniapp:build:mp-qq": "cross-env NODE_ENV=production UNI_PLATFORM=mp-qq vue-cli-service uni-build",
+    "uniapp:build:mp-toutiao": "cross-env NODE_ENV=production UNI_PLATFORM=mp-toutiao vue-cli-service uni-build",
+    "uniapp:build:mp-weixin": "cross-env NODE_ENV=production UNI_PLATFORM=mp-weixin vue-cli-service uni-build",
+    "uniapp:info": "node node_modules/@dcloudio/vue-cli-plugin-uni/commands/info.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
     "commit": "git cz"
   },
+  "browserslist": [
+    "Android >= 4",
+    "ios >= 8"
+  ],
   "main": "shell.js",
   "build": {
     "productName": "AVBVConverter",
