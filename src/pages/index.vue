@@ -30,6 +30,10 @@ export default {
       input: ''
     }
   },
+  onShow() {
+    // eslint-disable-next-line
+    uni.showShareMenu({})
+  },
   methods: {
     convert() {
       if (!this.input || this.input === '') return
