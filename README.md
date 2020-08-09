@@ -13,6 +13,8 @@
 
 附上知乎大佬写的 [原 Python 版](https://www.zhihu.com/question/381784377/answer/1099438784)
 
+也有小伙伴写了 `go` 版本的 [b23utils](https://github.com/d1y/b23utils)
+
 静态站已经部署了：<https://av.bilisc.com>
 
 网站里面也有 Electron 版的下载地址。
